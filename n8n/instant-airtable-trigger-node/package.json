@@ -1,0 +1,59 @@
+{
+  "name": "@vwork-digital/n8n-nodes-fillout",
+  "version": "1.0.2",
+  "description": "N8N nodes for Fillout forms - includes both trigger and action nodes.",
+  "keywords": [
+    "n8n-community-node-package",
+    "fillout",
+    "forms"
+  ],
+  "publishConfig": {
+      "access": "public"
+    },
+  "license": "MIT",
+  "homepage": "https://www.fillout.com",
+  "author": {
+    "name": "Jacob Vendramin",
+    "email": "jacob@vwork.digital"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jvendramin/fillout-n8n-node.git"
+  },
+  "engines": {
+    "node": ">=20.11.0"
+  },
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc && gulp build:icons",
+    "dev": "tsc --watch",
+    "format": "prettier nodes credentials --write",
+    "lint": "eslint nodes credentials package.json",
+    "lintfix": "eslint nodes credentials package.json --fix",
+    "prepublishOnly": "npm run build && npm run lint -c .eslintrc.prepublish.js nodes credentials package.json"
+  },
+  "files": [
+    "dist"
+  ],
+  "n8n": {
+    "n8nNodesApiVersion": 1,
+    "credentials": [
+      "dist/credentials/FilloutApi.credentials.js"
+    ],
+    "nodes": [
+      "dist/nodes/Fillout/Fillout.node.js",
+      "dist/nodes/Fillout/FilloutTrigger.node.js"
+    ]
+  },
+  "devDependencies": {
+    "@typescript-eslint/parser": "~8.32.0",
+    "eslint": "^8.57.0",
+    "eslint-plugin-n8n-nodes-base": "^1.16.3",
+    "gulp": "^5.0.0",
+    "prettier": "^3.5.3",
+    "typescript": "^5.8.2"
+  },
+  "peerDependencies": {
+    "n8n-workflow": "*"
+  }
+}
