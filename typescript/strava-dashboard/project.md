@@ -5,6 +5,9 @@ category: typescript
 tags: [Next.js, TypeScript, Strava API, Recharts, Gemini AI, PWA]
 status: Live
 repo: https://github.com/jvendramin/strava-dashboard
+images:
+  - https://backend.vwork.digital/storage/v1/object/public/assets/projects/IMG_2761.jpg
+  - https://backend.vwork.digital/storage/v1/object/public/assets/projects/IMG_2762.jpg
 ---
 
 A private dashboard for visualizing Strava training data. Connects via OAuth to the Strava API and renders activity history with charts built in Recharts.
