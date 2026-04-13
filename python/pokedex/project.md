@@ -1,6 +1,6 @@
 ---
 title: Pokédex
-description: A terminal Pokédex that fetches live data from the PokéAPI. Look up any Pokémon by name or ID to see base stats, types, abilities, height, and weight.
+description: A tkinter Pokédex that fetches live data from the PokéAPI. Look up any Pokémon by name or ID to see their name, image, types, and hear the audio of their cry.
 category: python
 tags: [Python, REST API, PokéAPI]
 status: Complete
@@ -9,3 +9,4 @@ video: https://backend.vwork.digital/storage/v1/object/public/assets/projects/po
 ---
 
 Supports side-by-side stat comparison mode for any two Pokémon. Built with the free PokéAPI — no auth required.
+
