@@ -1,5 +1,5 @@
 ---
-title: Pokédex CLI
+title: Pokédex
 description: A terminal Pokédex that fetches live data from the PokéAPI. Look up any Pokémon by name or ID to see base stats, types, abilities, height, and weight.
 category: python
 tags: [Python, CLI, REST API, PokéAPI]
