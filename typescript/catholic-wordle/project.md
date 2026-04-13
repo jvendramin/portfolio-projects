@@ -5,6 +5,7 @@ category: typescript
 tags: [Next.js, TypeScript, Game, PWA]
 status: Live
 repo: https://github.com/jvendramin/catholic-wordle
+iframe: https://catholic-wordle.vercel.app/
 ---
 
 A faith-themed spin on the classic Wordle format. Players guess a daily 5-letter word pulled from Catholic vocabulary — saints' names, theological terms, and liturgical words.
