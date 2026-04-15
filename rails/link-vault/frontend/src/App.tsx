@@ -1,28 +1,25 @@
 /**
- * LINK VAULT — Sinatra API + Tauri + React (TypeScript) macOS Desktop App
+ * LINK VAULT — Ruby (standalone) + Tauri + React (TypeScript) macOS Desktop App
  *
  * link-vault/
- * ├── backend/                      ← Ruby/Sinatra local HTTP server
- * │   ├── Gemfile                   ← sinatra, pg, sinatra-contrib, rack-cors
- * │   ├── app.rb                    ← Sinatra routes: GET/POST/DELETE /links
- * │   └── config/database.yml       ← PostgreSQL connection
+ * ├── backend/
+ * │   ├── Gemfile           ← activerecord, pg, sinatra, rack-cors
+ * │   ├── db.rb             ← ActiveRecord.establish_connection; defines Link model
+ * │   └── server.rb         ← Sinatra routes (GET/POST/DELETE /links) on :4567
  * │
- * └── frontend/                     ← Tauri + React + TypeScript
- *     ├── src-tauri/                ← Tauri native layer (Rust)
- *     │   ├── tauri.conf.json       ← app name, window size, sidecar config
- *     │   └── src/main.rs           ← spawns backend/app.rb as sidecar on launch
+ * └── frontend/             ← Tauri + React + TypeScript
+ *     ├── src-tauri/
+ *     │   └── tauri.conf.json  ← window config; sidecar spawns backend/server.rb
  *     └── src/
- *         ├── App.tsx               ← YOU ARE HERE
- *         ├── api/links.ts          ← fetch calls to localhost:4567
+ *         ├── App.tsx          ← YOU ARE HERE
+ *         ├── api/links.ts     ← fetch calls to localhost:4567
  *         └── components/
  *             ├── LinkCard.tsx
  *             └── AddLinkForm.tsx
  *
  * DB: links (id, title, url, description, created_at)
- * API: GET /links  POST /links  DELETE /links/:id  (localhost:4567)
+ * API: GET /links  POST /links  DELETE /links/:id
  *
- * Setup:
- *   npm create tauri-app@latest frontend -- --template react-ts
- *   gem install sinatra pg
- *   bundle exec ruby backend/app.rb   ← dev: run manually on :4567
+ * Run backend: bundle exec ruby backend/server.rb
+ * Run frontend: npm run tauri dev
  */
