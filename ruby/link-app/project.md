@@ -7,4 +7,4 @@ repo: https://github.com/jvendramin/link-app
 video: https://backend.vwork.digital/storage/v1/object/public/vwork-digital/demos/link-app-demo.webm
 ---
 
-A lightweight link bookmarking app built with Ruby on Rails. Supports adding, editing, and deleting links with descriptions, plus a favourites system. All forms live in DaisyUI modal dialogs for a clean, no-page-refresh feel.
+Built with Ruby on Rails, styled with DaisyUI components, and backed by PostgreSQL via ActiveRecord. All forms live in modal dialogs for a clean, no-page-refresh feel.
